@@ -184,10 +184,11 @@ class Cli {
           answers.color,
           answers.make,
           answers.model,
-          parseInt(answers.year),
-          parseInt(answers.weight),
-          parseInt(answers.topSpeed),
-          parseInt(answers.towingCapacity)
+          answers.year,
+          answers.weight,
+          answers.topSpeed,
+          [],
+          answers.towingCapacity
         );
         
         // push the truck to the vehicles array
@@ -264,7 +265,7 @@ class Cli {
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
           new Wheel(parseInt(answers.frontWheelDiameter), answers.frontWheelBrand),
-          new Wheel(parseInt(answers.rearWheelDiameter), answers.rearWheelBrand)
+          new Wheel(parseInt(answers.rearWheelDiameter), answers.rearWheelBrand),
         );
         this.vehicles.push(motorbike);
         this.selectedVehicleVin = motorbike.vin;
